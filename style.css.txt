@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+header {
+  background: #004080;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  background: #0066cc;
+  padding: 10px;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+.fleet {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.fleet-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 150px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  background: #e65c00;
+}
+
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    text-align: center;
+    background: #0066cc;
+    padding: 10px;
+  }
+
+  nav ul.active {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  .fleet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fleet-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
