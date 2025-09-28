@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fateh Travels</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Fateh Travels</h1>
+    <p>Your Reliable Travel Partner</p>
+  </header>
+
+  <nav>
+    <!-- Hamburger button -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Booking</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Reliable Cab Services</h2>
+    <p>We provide safe, comfortable, and timely rides across the city. Book your cab today!</p>
+
+    <h2>Our Fleet</h2>
+    <div class="fleet">
+      <div class="fleet-item">
+        <h3>🚗 Sedan</h3>
+      </div>
+      <div class="fleet-item">
+        <h3>🚙 SUV</h3>
+      </div>
+      <div class="fleet-item">
+        <h3>🚐 Mini Van</h3>
+      </div>
+    </div>
+
+    <a href="#" class="cta-btn">Book Your Ride Now</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Fateh Travels. All rights reserved.</p>
+  </footer>
+
+  <!-- Small JavaScript to toggle menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
