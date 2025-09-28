@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Booking — Fateh Travels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-strip">
+    <div class="container">
+      <div class="top-left">📍 Main Market, Your City</div>
+      <div class="top-right">
+        <a href="tel:+919876543210">+91-98765-43210</a> |
+        <a href="mailto:fatehtravels@gmail.com">fatehtravels@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Fateh Travels Logo" class="logo">
+        <div><h1>Fateh Travels</h1><small>Your Reliable Travel Partner</small></div>
+      </a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container booking-form">
+    <h2>Book Your Ride</h2>
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <input name="name" placeholder="Name" required>
+      <input name="phone" placeholder="Phone" required>
+      <select name="vehicle" required>
+        <option value="">Choose vehicle</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Mini Van</option>
+      </select>
+      <input name="pickup" placeholder="Pickup Location" required>
+      <input name="drop" placeholder="Drop Location" required>
+      <input type="date" name="date" required>
+      <button class="btn btn-primary" type="submit">Submit Booking</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h4>Fateh Travels</h4><p>Main Market, Your City — +91-98765-43210</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li></ul></div>
+      <div><h4>Follow</h4><p>Facebook · Instagram</p></div>
+    </div>
+    <div class="copyright">© 2025 Fateh Travels — All Rights Reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
