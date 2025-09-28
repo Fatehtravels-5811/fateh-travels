@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fateh Travels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’re here to help you 24/7</p>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:fatehtravels@gmail.com">fatehtravels@gmail.com</a></p>
+    <p>Phone: +91-9876543210</p>
+    <p>Address: Main Market, Your City, India</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Fateh Travels. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

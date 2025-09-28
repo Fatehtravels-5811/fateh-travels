@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Fateh Travels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>About Us</h1>
+    <p>Know more about Fateh Travels</p>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Our Story</h2>
+    <p>Fateh Travels has been serving customers with reliable cab services for years. Our mission is to provide safe, affordable, and comfortable rides.</p>
+
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✔ Professional Drivers</li>
+      <li>✔ Clean & Comfortable Cars</li>
+      <li>✔ 24/7 Availability</li>
+      <li>✔ Affordable Pricing</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Fateh Travels. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
