@@ -1,151 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fateh Travels | Intercity Rides</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset some defaults */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        header .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 70vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            background-color: rgba(0,0,0,0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        section {
-            padding: 60px 20px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .services, .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .service-box, .contact-box {
-            flex: 1 1 300px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav {
-                margin-top: 10px;
-            }
-
-            .hero h2 {
-                font-size: 1.8rem;
-                padding: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fateh Travels</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Fateh Travels</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">🚖 Fateh Travels</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-content container">
+        <h1>Safe & Reliable Rides in Punjab</h1>
+        <p>Your trusted intercity taxi service — from Mohali, Chandigarh, Ludhiana, Delhi & more.</p>
+        <a href="booking.html" class="btn">Book Now</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Reliable Intercity Rides from Mohali & Chandigarh</h2>
-    </section>
+  <section class="services container">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="assets/airport.svg" alt="Airport">
+        <h3>Airport Transfers</h3>
+        <p>On-time pickup/drop to Delhi Airport and more.</p>
+      </div>
+      <div class="card">
+        <img src="assets/intercity.svg" alt="Intercity">
+        <h3>Intercity Rides</h3>
+        <p>Comfortable rides across cities in Punjab, NCR & more.</p>
+      </div>
+      <div class="card">
+        <img src="assets/cab.svg" alt="Taxi">
+        <h3>Local & Hourly Hire</h3>
+        <p>Short trips, errands, hourly hires.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 style="text-align:center; margin-bottom:40px;">Our Services</h2>
-            <div class="service-box">
-                <h3>Airport Transfers</h3>
-                <p>Comfortable and timely rides to Delhi Airport and other major airports.</p>
-            </div>
-            <div class="service-box">
-                <h3>Intercity Rides</h3>
-                <p>Travel between cities like Ludhiana, Patiala, Amritsar, Nan
+  <footer class="site-footer">
+    <div class="container">
+      <p>📞 Call: <a href="tel:+917657976742">+91 76579 76742</a></p>
+      <p>© 2025 Fateh Travels • All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
