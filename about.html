@@ -1,151 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Fateh Travels</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        header .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        section {
-            padding: 60px 20px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1 1 400px;
-        }
-
-        .about-text h2 {
-            margin-bottom: 20px;
-            color: #0056b3;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-        }
-
-        .about-image {
-            flex: 1 1 400px;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav {
-                margin-top: 10px;
-            }
-
-            .about-content {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us ‒ Fateh Travels</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Fateh Travels</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">🚖 Fateh Travels</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+  </header>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container about-content">
-            <div class="about-text">
-                <h2>About Fateh Travels</h2>
-                <p>Fateh Travels is a trusted intercity transport service based in Mohali and Chandigarh. We specialize in providing safe, comfortable, and timely rides to airports and major cities like Ludhiana, Patiala, Amritsar, Nangal, and Una.</p>
-                <p>With our 2025 Dzire Tour CNG vehicles, we ensure a smooth journey with experienced drivers and excellent customer service. Our goal is to make travel easy, reliable, and affordable for everyone.</p>
-                <p>Whether you need a quick airport transfer or a customized tour, Fateh Travels is your partner on the road.</p>
-            </div>
-            <div class="about-image">
-                <img src="about-image.jpg" alt="Fateh Travels Vehicle">
-            </div>
-        </div>
+  <main class="container">
+    <section class="about-section">
+      <h2>About Fateh Travels</h2>
+      <p>Fateh Travels is a trustworthy taxi/cab service operating across Punjab, NCR & neighboring regions. We specialize in airport transfers, intercity journeys, and short local rides. Our goal is safety, comfort, transparency, and on-time service.</p>
+      <p>We use well-maintained vehicles (CNG / eco-friendly options), experienced drivers, and fixed fare policies — no hidden charges.</p>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Fateh Travels. All Rights Reserved.</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Fateh Travels • All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
