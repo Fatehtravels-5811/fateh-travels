@@ -1,163 +1,97 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
+/* General */
 body {
-    line-height: 1.6;
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
 
-/* Header */
-header {
-    background: #007BFF;
-    color: white;
-    padding: 10px 0;
+/* Navbar */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff8000;
+  padding: 10px 20px;
 }
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
+header nav .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
-
-header .logo h1 {
-    font-size: 24px;
-}
-
 header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
-
 header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
-
 header nav ul li a.active {
-    text-decoration: underline;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
-    display: block;
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-    background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ff9933, #ff6600);
+  color: white;
+}
+.hero h2 {
+  font-size: 32px;
+}
+.hero p {
+  font-size: 18px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: white;
+  color: #ff6600;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.hero .btn {
-    background: #FF5733;
-    color: white;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-/* Services Section */
+/* Services */
 .services {
-    padding: 60px 20px;
-    text-align: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
 }
 
-.service-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.service-cards .card {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    transition: transform 0.3s;
-}
-
-.service-cards .card:hover {
-    transform: translateY(-10px);
-}
-
-/* CTA Section */
-.cta {
-    background: #007BFF;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.cta .btn {
-    background: #FF5733;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
+/* Content Pages */
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 14px;
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: white;
+  margin-top: 20px;
 }
 
-footer a {
-    color: #FF5733;
-    text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: #007BFF;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    header nav ul.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
