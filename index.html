@@ -1,51 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fateh Travels - Taxi Service</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fateh Travels — Reliable Intercity Rides</title>
+  <meta name="description" content="Fateh Travels — Intercity taxi/cab services from Mohali/Chandigarh to Delhi Airport, Ludhiana, Amritsar and more." />
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">🚖 Fateh Travels</h1>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <h2>Your Trusted Ride Across Punjab</h2>
-      <p>Fast, Reliable & Affordable Taxi Service</p>
-      <a href="booking.html" class="btn">Book a Ride</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Fateh Travels</a>
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#booking">Book Now</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary" href="#booking">Book Now</a>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
     </div>
   </header>
 
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Airport Transfers</h3>
-        <p>Mohali/Chandigarh to Delhi Airport with comfort & punctuality.</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Safe. Comfortable. On-time rides from Mohali to Delhi Airport & beyond</h1>
+          <p class="lead">Modern CNG Dzire Tour vehicles | Experienced drivers | Fixed fares | 24/7 support</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#booking">Book a Ride</a>
+            <a class="btn btn-ghost" id="whatsappBtn" href="#">Chat on WhatsApp</a>
+          </div>
+          <ul class="features">
+            <li>Airport transfers</li>
+            <li>Intercity & outstation</li>
+            <li>Online booking & instant confirmation</li>
+          </ul>
+        </div>
+        <div class="hero-right">
+          <div class="card booking-card" id="booking">
+            <h3>Quick Booking</h3>
+            <form id="bookingForm">
+              <label>Pickup</label>
+              <input name="pickup" id="pickup" placeholder="Mohali / Chandigarh" required>
+              <label>Drop</label>
+              <input name="drop" id="drop" placeholder="Delhi Airport / Ludhiana / Amritsar" required>
+              <div class="row">
+                <div>
+                  <label>Date</label>
+                  <input type="date" name="date" id="date" required>
+                </div>
+                <div>
+                  <label>Passengers</label>
+                  <input type="number" name="passengers" id="passengers" min="1" value="1" required>
+                </div>
+              </div>
+              <label>Contact Number</label>
+              <input name="phone" id="phone" placeholder="+91 76579 76742" required>
+              <button class="btn btn-primary" type="submit">Request Quote</button>
+            </form>
+            <p class="small">Or call: <a href="tel:+917657976742">+91 76579 76742</a></p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Intercity Rides</h3>
-        <p>Travel to Ludhiana, Patiala, Amritsar, Una, Nangal & more.</p>
-      </div>
-      <div class="card">
-        <h3>24/7 Availability</h3>
-        <p>We are always available — day or night!</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>📞 Call us: <a href="tel:+917657976742">+91 7657976742</a></p>
-    <p>&copy; 2025 Fateh Travels. All rights reserved.</p>
-  </footer>
+    <!-- Services -->
+    <section class="container services" id="services">
+      <h2>Our Services</h2>
+      <div class="grid-3">
+        <div class="service">
+          <img alt="airport icon" src="assets/airport.svg">
+          <h4>Airport Transfers</h4>
+          <p>Punctual pickups and dropoffs to/from Delhi Airport with flight monitoring.</p>
+        </div>
+        <div class="service">
+          <img alt="city icon" src="assets/intercity.svg">
+          <h4>Intercity Rides</h4>
+          <p>Comfortable outstation trips to Ludhiana, Patiala, Amritsar and nearby cities.</p>
+        </div>
+        <div class="service">
+          <img alt="wheel icon" src="assets/cab.svg">
+          <h4>Hourly & Local</h4> 
+          <p>Short trips, hourly hires and local errands — flexible pricing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="container about" id="about">
+      <div class="about-inner">
+        <div>
+          <h2>Why choose Fateh Travels?</h2>
+          <p>We operate clean, well-maintained CNG Dzire Tour cars, driven by experienced professionals. Safety, comfort, and clear pricing are our priorities.</p>
+          <ul>
+            <li>Transparent fares — no surge pricing</li>
+            <li>Real-time driver updates</li>
+            <li>Easy online & WhatsApp booking</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="assets/car.jpg" alt="Fateh Travels car">
+        </div>
+      </div>
+    </section>
+
+    <!-- Map + Contact -->
+    <section class="container contact" id="contact">
+      <h2>Contact & Location</h2>
+      <div class="contact-grid">
+        <div class="map">
+          <!-- Replace the src with your Google Maps embed link -->
+          <iframe title="location" src="https://www.google.com/maps/embed?pb=!1m18..." style="border:0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact-details">
+          <h3>Get in touch</h3>
+          <p><strong>Fateh Travels</strong><br>Mohali, Chandigarh</p>
+          <p><strong>Phone:</strong> <a href="tel:+917657976742">+91 76579 76742</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@fatehtravels.in">info@fatehtravels.in</a></p>
+          <div class="socials">
+            <a href="#" target="_blank">Facebook</a> · <a href="#" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>© <span id="year"></span> Fateh Travels • All rights reserved</div>
+        <div>Designed with care • <a href="#booking">Book a ride</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
