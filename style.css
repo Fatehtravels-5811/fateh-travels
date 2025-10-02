@@ -1,89 +1,96 @@
-/* Vehicle Gallery */
-.vehicles {
-  text-align: center;
-  padding: 50px 20px;
-  background: #f2f2f2; /* slightly lighter than body background */
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
 
-.vehicles h2 {
-  font-size: 28px;
-  color: #ff6600;
-  margin-bottom: 30px;
-}
-
-.vehicle-gallery {
+/* Navbar */
+header nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff8000;
+  padding: 10px 20px;
+}
+header nav .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+header nav ul li a.active {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ff9933, #ff6600);
+  color: white;
+}
+.hero h2 {
+  font-size: 32px;
+}
+.hero p {
+  font-size: 18px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: white;
+  color: #ff6600;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Services */
+.services {
+  text-align: center;
+  padding: 40px 20px;
+}
+.cards {
+  display: flex;
   justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+/* Content Pages */
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: white;
   margin-top: 20px;
 }
-
-.vehicle-card {
-  width: 250px;
-  background: white;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.vehicle-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.vehicle-card h3 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #ff6600;
-}
-
-.vehicle-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Responsive Styles */
-
-/* Tablets */
-@media (max-width: 992px) {
-  .vehicle-gallery {
-    gap: 15px;
-  }
-
-  .vehicle-card {
-    width: 45%; /* two cards per row */
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .vehicle-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .vehicle-card {
-    width: 90%; /* single card per row */
-  }
-
-  .hero h2 {
-    font-size: 26px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-}
-
