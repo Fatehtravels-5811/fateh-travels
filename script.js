@@ -1,41 +1,26 @@
-/* Simple interactions: hamburger, slider, modal */
-function toggleMenu(){
-  const nav = document.querySelector('.main-nav ul');
-  nav.classList.toggle('show');
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("bookingForm");
+  const message = document.getElementById("formMessage");
 
-/* Enquiry modal */
-function openEnquiry(){ document.getElementById('enquiry-modal').style.display='flex'; document.getElementById('enquiry-modal').setAttribute('aria-hidden','false'); }
-function closeEnquiry(){ document.getElementById('enquiry-modal').style.display='none'; document.getElementById('enquiry-modal').setAttribute('aria-hidden','true'); }
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const pickup = document.getElementById("pickup").value;
+      const dropoff = document.getElementById("dropoff").value;
+      const date = document.getElementById("date").value;
 
-/* Slider */
-let current = 0;
-const slides = document.querySelectorAll ? document.querySelectorAll('#hero-slider .slide') : [];
-function showSlide(i){
-  if(!slides.length) return;
-  if(i<0) i = slides.length-1;
-  if(i>=slides.length) i = 0;
-  current = i;
-  const wrapper = document.getElementById('hero-slider');
-  wrapper.style.transform = `translateX(-${i*100}%)`;
-}
-function nextSlide(){ showSlide(current+1); }
-function prevSlide(){ showSlide(current-1); }
+      if (!pickup || !dropoff || !date) {
+        message.textContent = "⚠️ Please fill all fields.";
+        return;
+      }
 
-/* Auto-advance */
-let slideInterval = setInterval(()=> nextSlide(), 6000);
+      // Send booking via WhatsApp
+      const phone = "917657976742"; // Your number
+      const text = `Booking Request:%0A🚖 Pickup: ${pickup}%0A📍 Dropoff: ${dropoff}%0A📅 Date: ${date}`;
+      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
 
-/* Pause on hover (desktop) */
-const hero = document.getElementById('hero-slider');
-if(hero){
-  hero.addEventListener('mouseenter', ()=> clearInterval(slideInterval));
-  hero.addEventListener('mouseleave', ()=> slideInterval = setInterval(()=> nextSlide(), 6000));
-}
-
-/* Close modal when clicking outside panel */
-const modal = document.getElementById('enquiry-modal');
-if(modal){
-  modal.addEventListener('click', (e)=>{
-    if(e.target === modal) closeEnquiry();
-  });
-}
+      message.textContent = "✅ Redirecting to WhatsApp for booking...";
+      form.reset();
+    });
+  }
+});
