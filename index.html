@@ -1,203 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fateh Travels — Home</title>
-  <meta name="description" content="Fateh Travels — Safe, comfortable and affordable cab & tour services. Book sedans, SUVs, and mini vans."/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fateh Travels - Taxi Service</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top strip with contact -->
-  <div class="top-strip">
-    <div class="container">
-      <div class="top-left">📍 Airport Road, Chandigarh Tricity</div>
-      <div class="top-right">
-        <a href="tel:+917657976742">+91-76579-76742</a> |
-        <a href="mailto:fatehtravels@gmail.com">fatehtravels@gmail.com</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header & Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Fateh Travels Logo" class="logo">
-        <div>
-          <h1>Fateh Travels</h1>
-          <small>Your Reliable Travel Partner</small>
-        </div>
-      </a>
-
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
-
-      <nav class="main-nav" id="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-
-          <li class="dropdown">
-            <a href="#">Services ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Sedan Rental</a></li>
-              <li><a href="#">SUV Rental</a></li>
-              <li><a href="#">Minivan / Groups</a></li>
-              <li><a href="#">Airport Transfers</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#">Packages ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Delhi Tours</a></li>
-              <li><a href="#">Agra / Taj Mahal</a></li>
-              <li><a href="#">Golden Triangle</a></li>
-              <li><a href="#">Himachal Tours</a></li>
-               <li><a href="#">Utrakhand Tours</a></li>
-               <li><a href="#">Punjab Tours</a></li>
-               <li><a href="#">Haryana Tours</a></li>
-               <li><a href="#">Rajasthan Tours</a></li>
-            </ul>
-          </li>
-
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
-        </ul>
-      </nav>
+  <header>
+    <nav>
+      <h1 class="logo">🚖 Fateh Travels</h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h2>Your Trusted Ride Across Punjab</h2>
+      <p>Fast, Reliable & Affordable Taxi Service</p>
+      <a href="booking.html" class="btn">Book a Ride</a>
     </div>
   </header>
 
-  <!-- HERO slider -->
-  <section class="hero">
-    <div class="hero-slider" id="hero-slider">
-      <div class="slide" style="background-image: url('images/hero1.jpg')">
-        <div class="hero-content container">
-          <h2>Safe & Comfortable Rides</h2>
-          <p>Book sedans, SUVs and mini vans for local and outstation trips.</p>
-          <a href="booking.html" class="btn btn-cta">Book Your Ride</a>
-        </div>
-      </div>
-      <div class="slide" style="background-image: url('images/hero2.jpg')">
-        <div class="hero-content container">
-          <h2>Airport Transfers</h2>
-          <p>Punctual pickup and drop — 24/7 service.</p>
-          <a href="contact.html" class="btn btn-cta">Contact Us</a>
-        </div>
-      </div>
-    </div>
-    <div class="slider-controls container">
-      <button onclick="prevSlide()">‹</button>
-      <button onclick="nextSlide()">›</button>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="container services">
+  <section class="services">
     <h2>Our Services</h2>
     <div class="cards">
-      <article class="card">
-        <img src="images/sedan.jpg" alt="Sedan">
-        <h3>Sedan Rental</h3>
-        <p>Comfortable sedans for city rides and airport transfers.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/suv.jpg" alt="SUV">
-        <h3>SUV & Family</h3>
-        <p>Spacious SUVs for family trips and outstation journeys.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/minivan.jpg" alt="Minivan">
-        <h3>Mini Van & Groups</h3>
-        <p>Group travel solutions — tempo travellers & minibuses available.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Packages preview -->
-  <section class="container packages">
-    <h2>Featured Packages</h2>
-    <div class="cards small">
       <div class="card">
-        <h4>Delhi City Tour</h4>
-        <p>Old & New Delhi full day — pick & drop included.</p>
-        <a href="#" class="btn">View Details</a>
+        <h3>Airport Transfers</h3>
+        <p>Mohali/Chandigarh to Delhi Airport with comfort & punctuality.</p>
       </div>
       <div class="card">
-        <h4>Agra (Taj Mahal)</h4>
-        <p>Day trip or overnight — customizable.</p>
-        <a href="#" class="btn">View Details</a>
+        <h3>Intercity Rides</h3>
+        <p>Travel to Ludhiana, Patiala, Amritsar, Una, Nangal & more.</p>
       </div>
       <div class="card">
-        <h4>Golden Triangle</h4>
-        <p>New Delhi – Agra – Jaipur (3 days) — guided options.</p>
-        <a href="#" class="btn">View Details</a>
+        <h3>24/7 Availability</h3>
+        <p>We are always available — day or night!</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="container testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-list">
-      <blockquote>
-        “Very punctual drivers and clean cars — would travel again.” <cite>— Ritesh</cite>
-      </blockquote>
-      <blockquote>
-        “Excellent service for our Golden Triangle tour.” <cite>— Priya</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- Enquiry CTA -->
-  <section class="container cta">
-    <div class="box">
-      <h3>Have questions? Need a quote?</h3>
-      <button class="btn btn-primary" onclick="openEnquiry()">Enquiry Now</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Fateh Travels</h4>
-        <p>Airport road, Chandigarh Tricity — +91-76579-76742</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Follow</h4>
-        <p>Facebook · Instagram · TripAdvisor</p>
-      </div>
-    </div>
-    <div class="copyright">© 2025 Fateh Travels — All Rights Reserved.</div>
+  <footer>
+    <p>📞 Call us: <a href="tel:+917657976742">+91 7657976742</a></p>
+    <p>&copy; 2025 Fateh Travels. All rights reserved.</p>
   </footer>
-
-  <!-- Enquiry Modal (hidden) -->
-  <div class="modal" id="enquiry-modal" aria-hidden="true">
-    <div class="modal-panel">
-      <button class="modal-close" onclick="closeEnquiry()">✕</button>
-      <h3>Enquiry</h3>
-      <form action="https://formspree.io/f/your-id" method="POST">
-        <input name="name" placeholder="Your name" required>
-        <input name="phone" placeholder="Phone" required>
-        <input name="email" placeholder="Email (optional)">
-        <textarea name="message" placeholder="Tell us your requirements" rows="4"></textarea>
-        <button class="btn btn-primary" type="submit">Send Enquiry</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
 
