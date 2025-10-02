@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Booking ‒ Fateh Travels</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your cab with Fateh Travels. Fill the form to schedule your ride.">
+    <meta name="keywords" content="Fateh Travels, Cab Booking, Taxi, Airport Transfer, Outstation">
+    <meta name="author" content="Fateh Travels">
+    <title>Booking - Fateh Travels</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="index.html" class="logo">🚖 Fateh Travels</a>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="booking.html" class="active">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      </div>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Fateh Travels</h1>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-  <main class="container">
-    <section class="booking-section">
-      <h2>Book Your Ride</h2>
-      <form id="bookingForm">
-        <input type="text" id="pickup" placeholder="Pickup Location" required />
-        <input type="text" id="dropoff" placeholder="Dropoff Location" required />
-        <input type="datetime-local" id="date" required />
-        <button type="submit" class="btn">Book Now</button>
-      </form>
-      <p id="formMessage"></p>
+    <!-- Booking Form Section -->
+    <section class="booking">
+        <div class="container">
+            <h2>Book Your Ride</h2>
+            <form action="#" method="POST" id="booking-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="pickup">Pickup Location</label>
+                <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+
+                <label for="drop">Drop Location</label>
+                <input type="text" id="drop" name="drop" placeholder="Enter drop location" required>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="service">Select Service</label>
+                <select id="service" name="service" required>
+                    <option value="airport">Airport Transfer</option>
+                    <option value="city">City Ride</option>
+                    <option value="outstation">Outstation Ride</option>
+                </select>
+
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Fateh Travels • All rights reserved</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fateh Travels | Contact: 7657976742</p>
+            <p>Follow us on 
+                <a href="#">Facebook</a>, 
+                <a href="#">Instagram</a>, 
+                <a href="#">WhatsApp</a>
+            </p>
+        </div>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
