@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Ride - Fateh Travels</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking ‒ Fateh Travels</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <h1 class="logo">🚖 Fateh Travels</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="booking.html" class="active">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">🚖 Fateh Travels</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="booking.html" class="active">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
     </nav>
   </header>
 
-  <main class="content">
-    <h2>Book Your Ride</h2>
-    <form id="bookingForm">
-      <input type="text" id="pickup" placeholder="Pickup Location" required>
-      <input type="text" id="dropoff" placeholder="Dropoff Location" required>
-      <input type="datetime-local" id="date" required>
-      <button type="submit" class="btn">Book Now</button>
-    </form>
-    <p id="formMessage"></p>
+  <main class="container">
+    <section class="booking-section">
+      <h2>Book Your Ride</h2>
+      <form id="bookingForm">
+        <input type="text" id="pickup" placeholder="Pickup Location" required />
+        <input type="text" id="dropoff" placeholder="Dropoff Location" required />
+        <input type="datetime-local" id="date" required />
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Fateh Travels</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Fateh Travels • All rights reserved</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
