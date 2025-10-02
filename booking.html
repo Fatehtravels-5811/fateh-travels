@@ -1,69 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Booking — Fateh Travels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Ride - Fateh Travels</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="top-strip">
-    <div class="container">
-      <div class="top-left">📍 Airport Road, Chandiagrh Tricity</div>
-      <div class="top-right">
-        <a href="tel:+917657976742">+91-76579-76742</a> |
-        <a href="mailto:fatehtravels@gmail.com">fatehtravels@gmail.com</a>
-      </div>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Fateh Travels Logo" class="logo">
-        <div><h1>Fateh Travels</h1><small>Your Reliable Travel Partner</small></div>
-      </a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <nav class="main-nav" id="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <h1 class="logo">🚖 Fateh Travels</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container booking-form">
+  <main class="content">
     <h2>Book Your Ride</h2>
-    <form action="https://formspree.io/f/your-id" method="POST">
-      <input name="name" placeholder="Name" required>
-      <input name="phone" placeholder="Phone" required>
-      <select name="vehicle" required>
-        <option value="">Choose vehicle</option>
-        <option>Sedan</option>
-        <option>SUV</option>
-        <option>Mini Van</option>
-      </select>
-      <input name="pickup" placeholder="Pickup Location" required>
-      <input name="drop" placeholder="Drop Location" required>
-      <input type="date" name="date" required>
-      <button class="btn btn-primary" type="submit">Submit Booking</button>
+    <form id="bookingForm">
+      <input type="text" id="pickup" placeholder="Pickup Location" required>
+      <input type="text" id="dropoff" placeholder="Dropoff Location" required>
+      <input type="datetime-local" id="date" required>
+      <button type="submit" class="btn">Book Now</button>
     </form>
+    <p id="formMessage"></p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><h4>Fateh Travels</h4><p>Airport Road, Chandiagrh Tricity — +91-76579-76742</p></div>
-      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li></ul></div>
-      <div><h4>Follow</h4><p>Facebook · Instagram</p></div>
-    </div>
-    <div class="copyright">© 2025 Fateh Travels — All Rights Reserved.</div>
+  <footer>
+    <p>&copy; 2025 Fateh Travels</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
+
 
 
