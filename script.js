@@ -38,14 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Display confirmation message
-      formMessage.textContent = `✅ Your ride from "${pickup}" to "${dropoff}" on ${new Date(date).toLocaleString()} has been booked! We will contact you shortly.`;
+      // Create WhatsApp message
+      const message = `🚖 Booking Request from Fateh Travels:
+Pickup: ${pickup}
+Dropoff: ${dropoff}
+Date/Time: ${new Date(date).toLocaleString()}`;
+
+      const whatsappNumber = "917657976742"; // your number with country code
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+      // Open WhatsApp link in new tab
+      window.open(whatsappURL, "_blank");
+
+      // Show confirmation message on website
+      formMessage.textContent = "✅ Booking info sent to WhatsApp!";
       formMessage.style.color = "green";
 
       // Reset form
       form.reset();
 
-      // Hide confirmation message after 5 seconds
+      // Hide message after 5 seconds
       setTimeout(() => {
         formMessage.textContent = "";
       }, 5000);
