@@ -118,6 +118,48 @@ header nav ul li a:hover {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Booking Form */
+#bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#bookingForm input,
+#bookingForm button {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#bookingForm input:focus {
+  border-color: #ff8000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255,128,0,0.5);
+}
+
+#bookingForm button {
+  background: #ff8000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#bookingForm button:hover {
+  background: #ff6600;
+}
+
+#formMessage {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -149,5 +191,10 @@ footer {
   .hero p {
     font-size: 16px;
   }
-}
 
+  #bookingForm input,
+  #bookingForm button {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
