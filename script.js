@@ -1,26 +1,32 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("bookingForm");
-  const message = document.getElementById("formMessage");
+  const formMessage = document.getElementById("formMessage");
 
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const pickup = document.getElementById("pickup").value;
-      const dropoff = document.getElementById("dropoff").value;
-      const date = document.getElementById("date").value;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent form from submitting normally
 
-      if (!pickup || !dropoff || !date) {
-        message.textContent = "⚠️ Please fill all fields.";
-        return;
-      }
+    // Get form values
+    const pickup = document.getElementById("pickup").value.trim();
+    const dropoff = document.getElementById("dropoff").value.trim();
+    const date = document.getElementById("date").value;
 
-      // Send booking via WhatsApp
-      const phone = "917657976742"; // Your number
-      const text = `Booking Request:%0A🚖 Pickup: ${pickup}%0A📍 Dropoff: ${dropoff}%0A📅 Date: ${date}`;
-      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    // Simple validation
+    if (!pickup || !dropoff || !date) {
+      formMessage.textContent = "Please fill in all fields.";
+      formMessage.style.color = "red";
+      return;
+    }
 
-      message.textContent = "✅ Redirecting to WhatsApp for booking...";
-      form.reset();
-    });
-  }
+    // You can add more validations here (e.g., date in future)
+
+    // Display confirmation message
+    formMessage.textContent = `✅ Your ride from "${pickup}" to "${dropoff}" on ${new Date(date).toLocaleString()} has been booked! We will contact you shortly.`;
+    formMessage.style.color = "green";
+
+    // Optionally, reset form
+    form.reset();
+  });
 });
+
